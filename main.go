@@ -99,9 +99,9 @@ func main() {
 
 	leaderelection.RunOrDie(leaderelection.LeaderElectionConfig{
 		Lock:          rl,
-		LeaseDuration: 60 * time.Second,
-		RenewDeadline: 30 * time.Second,
-		RetryPeriod:   20 * time.Second,
+		LeaseDuration: 20 * time.Second,
+		RenewDeadline: 10 * time.Second,
+		RetryPeriod:   5 * time.Second,
 		Callbacks: leaderelection.LeaderCallbacks{
 			OnStartedLeading: run,
 			OnStoppedLeading: func() {

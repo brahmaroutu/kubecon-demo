@@ -1,0 +1,37 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+ name: kubecon-demo-rolebinding
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: demo
+roleRef:
+ kind: ClusterRole
+ name: kubecon-demo-role
+ apiGroup: rbac.authorization.k8s.io
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+ name: kubecon-demo-role
+rules:
+- apiGroups: [""]
+  resources: ["services"]
+  verbs: ["get", "watch", "list", "create", "update", "delete"]
+- apiGroups: [""]
+  resources: ["events"]
+  verbs: ["get", "watch", "list", "create", "update", "delete"]
+- apiGroups: ["samplecontrollee.k8s.io"]
+  resources: ["bars"]
+  verbs: ["get", "watch", "list", "create", "update", "delete"]
+- apiGroups: ["samplecontroller.k8s.io"]
+  resources: ["foos"]
+  verbs: ["get", "watch", "list", "create", "update", "delete"]
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get", "watch", "list", "create", "update", "delete"]
+- apiGroups: [""]
+  resources: ["endpoints"]
+  verbs: ["get", "watch", "list", "create", "update", "delete"]
+

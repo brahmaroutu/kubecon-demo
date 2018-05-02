@@ -2,6 +2,32 @@
 
 
 [[projects]]
+  name = "github.com/Huang-Wei/kubecon-demo"
+  packages = [
+    "pkg/apis/samplecontrollee",
+    "pkg/apis/samplecontrollee/v1alpha1",
+    "pkg/apis/samplecontroller",
+    "pkg/apis/samplecontroller/v1alpha1",
+    "pkg/client/clientset/versioned",
+    "pkg/client/clientset/versioned/scheme",
+    "pkg/client/clientset/versioned/typed/samplecontrollee/v1alpha1",
+    "pkg/client/clientset/versioned/typed/samplecontrollee/v1alpha1/fake",
+    "pkg/client/clientset/versioned/typed/samplecontroller/v1alpha1",
+    "pkg/client/clientset/versioned/typed/samplecontroller/v1alpha1/fake",
+    "pkg/client/informers/externalversions",
+    "pkg/client/informers/externalversions/internalinterfaces",
+    "pkg/client/informers/externalversions/samplecontrollee",
+    "pkg/client/informers/externalversions/samplecontrollee/v1alpha1",
+    "pkg/client/informers/externalversions/samplecontroller",
+    "pkg/client/informers/externalversions/samplecontroller/v1alpha1",
+    "pkg/client/listers/samplecontrollee/v1alpha1",
+    "pkg/client/listers/samplecontroller/v1alpha1",
+    "pkg/signals"
+  ]
+  revision = "9f0b15b4543fb9ee1623d1b3b0ab728534ecd5b8"
+  version = "v0.1.0"
+
+[[projects]]
   name = "github.com/PuerkitoBio/purell"
   packages = ["."]
   revision = "8a290539e2e8629dbc4e6bad948158f790ec31f4"
@@ -440,6 +466,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "73bdafab50bbc9142bcc9637ab90a18c4e2ec851e3df08198b18c9cdeb4c7601"
+  inputs-digest = "1ee7b400d157ad784e4fe30258ab7e9b517cd9a78a0e8c0583f2bbcfc8593a78"
   solver-name = "gps-cdcl"
   solver-version = 1

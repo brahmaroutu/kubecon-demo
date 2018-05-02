@@ -14,10 +14,22 @@ deps:
 
 build:
 	$(COMMONENVVAR) $(BUILDENVVAR) go build -o main *.go
+	$(COMMONENVVAR) $(BUILDENVVAR) go build -o poker/main poker/*.go
+	$(COMMONENVVAR) $(BUILDENVVAR) go build -o controllee/controllee controllee/*.go
+	$(COMMONENVVAR) $(BUILDENVVAR) go build -o barservice/barservice barservice/*.go
+
+image: build
+	docker build -t hweicdl/$(IMAGE_NAME):$(TAG) .
+	docker build -t hweicdl/poker:$(TAG) ./poker/
+	docker build -t hweicdl/controllee:$(TAG) ./controllee/
+	docker build -t hweicdl/barservice:$(TAG) ./barservice/
 
 push:
 	docker build -t hweicdl/$(IMAGE_NAME):$(TAG) .
 	docker login -u $(DOCKER_USERNAME) -p $(DOCKER_PASSWORD)
 	docker push hweicdl/$(IMAGE_NAME):$(TAG)
+	docker push hweicdl/poker:$(TAG)
+	docker push hweicdl/controllee:$(TAG)
+	docker push hweicdl/barservice:$(TAG)
 
 .PHONY: all deps test build push

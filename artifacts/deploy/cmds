@@ -1,0 +1,78 @@
+more namespace.yaml
+kubectl create -f namespace.yaml
+more namespace.yaml
+more rbac.yaml
+kubectl create -f rbac.yaml
+more namespace.yaml
+more rbac.yaml
+kubectl create -f kubecon-demo.yaml -n demo
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs @nodes -n demo
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs kubecon-demo-7745b9f656-c2kb5 -n demo
+kubectl logs kubecon-demo-7745b9f656-nrmcm -n demo
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs kubecon-demo-7745b9f656-c2kb5 -n demo
+kubectl logs kubecon-demo-7745b9f656-nrmcm -n demo
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs kubecon-demo-7745b9f656-c2kb5 -n demo
+kubectl logs kubecon-demo-7745b9f656-nrmcm -n demo
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs kubecon-demo-7745b9f656-c2kb5 -n demo -tail 1000
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs --tail 100 kubecon-demo-7745b9f656-c2kb5 -n demo -tail
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-c2kb5 -n demo -tail
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-c2kb5 -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-nrmcm -n demo
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-c2kb5 -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-nrmcm -n demo
+kubectl describe foo example-foo
+kubectl run -n demo image=hweicdl/poker:v0.1.0 poker
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-c2kb5 -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-nrmcm -n demo
+kubectl describe foo example-foo
+kubectl run -n demo --image=hweicdl/poker:v0.1.0 poker
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-c2kb5 -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-nrmcm -n demo
+kubectl logs --tail=100 poker-565f4c6dd8-ht6xh -n demo
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-c2kb5 -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-nrmcm -n demo
+kubectl describe foo example-foo
+kubectl run -n demo --image=hweicdl/poker:v0.1.0 poker
+more namespace.yaml
+more rbac.yaml
+kubectl get pods -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-c2kb5 -n demo
+kubectl logs --tail=100 kubecon-demo-7745b9f656-nrmcm -n demo
+kubectl describe foo example-foo
+kubectl run -n demo --image=hweicdl/poker:v0.1.0 poker
